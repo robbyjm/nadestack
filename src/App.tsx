@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+
+const MyCard = (): JSX.Element => {
+  return (
+    <div className="card">
+      <div className="card-body">
+        <h5 className="card-title">Card Title</h5>
+        <p className="card-text">some text</p>
+        <a href="#" className="btn btn-primary">
+          go somewhere
+        </a>
+        <a href="#" className="btn btn-primary">
+          favorite
+        </a>
+      </div>
+    </div>
+  );
+};
+
+const Nav = (): JSX.Element => {
+  return (
+    <nav className="navbar navbar-expand-lg">
+      <div className="container-fluid">
+        <a href="#" className="navbar-brand">
+          Nadestack
+        </a>
+      </div>
+    </nav>
+  );
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <MyCard />
     </div>
   );
 }
