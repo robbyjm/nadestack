@@ -1,0 +1,10 @@
+name: Check commit message
+on: [pull_request, push]
+
+jobs:
+  check-commit-message-style:
+    name: Check commit message style
+    runs-on: ubuntu-latest
+    steps:
+     - name: Check
+       uses: mristin/opinionated-commit-message@v3.0.0
