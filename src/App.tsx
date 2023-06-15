@@ -3,23 +3,24 @@ import logo from "./logo.svg";
 import "./App.css";
 
 const MyCard = (): JSX.Element => {
+  function handleClick() {
+    alert('you clicked me')    
+  }
   return (
     <div className="row">
       <div className="col-sm-3 mb-3 mb-sm-0">
         <div className="card">
           <video controls src="nukeheaven.mp4" className="img-thumbnail" />
-          <div className="card-body">
-            <h5 className="card-title">Card else</h5>
-            <p className="card-text">some text</p>
-            <a href="#" className="btn btn-primary">
-              go somewhere
-            </a>
-            <a href="#" className="btn btn-primary">
-              favorite
-            </a>
+          <div className="card-body container">
+            <div className="row"><h5 className="card-title col-sm-10">Heaven Smoke</h5>
+            <i className="bi bi-bookmark-star col-sm-2" onClick={handleClick()}></i>
+            </div>
+            <div className="row">
+              <p className="card-text col-sm-12">some text</p>
+            </div>
           </div>
           <div className="card-footer text-muted">
-            uploaded by @furnacetendie
+            uploaded by @furnacetendie<i className="bi bi-0-circle"></i>
           </div>
         </div>
       </div>
@@ -29,7 +30,7 @@ const MyCard = (): JSX.Element => {
 
 const Nav = (): JSX.Element => {
   return (
-    <div className="container">
+    <div className="container bg-primary">
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <a href="#" className="navbar-brand">
