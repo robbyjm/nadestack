@@ -5,10 +5,11 @@ import "./App.css";
 const MyCard = (): JSX.Element => {
   return (
     <div className="row">
-      <div className="col-sm-6 mb-3 mb-sm-0">
+      <div className="col-sm-3 mb-3 mb-sm-0">
         <div className="card">
+          <video controls src="nukeheaven.mp4" className="img-thumbnail" />
           <div className="card-body">
-            <h5 className="card-title">Card Title</h5>
+            <h5 className="card-title">Card else</h5>
             <p className="card-text">some text</p>
             <a href="#" className="btn btn-primary">
               go somewhere
@@ -17,19 +18,8 @@ const MyCard = (): JSX.Element => {
               favorite
             </a>
           </div>
-        </div>
-      </div>
-      <div className="col-sm-6 mb-3 mb-sm-0">
-        <div className="card">
-          <div className="card-body">
-            <h5 className="card-title">Card Title</h5>
-            <p className="card-text">some text</p>
-            <a href="#" className="btn btn-primary">
-              go somewhere
-            </a>
-            <a href="#" className="btn btn-primary">
-              favorite
-            </a>
+          <div className="card-footer text-muted">
+            uploaded by @furnacetendie
           </div>
         </div>
       </div>
@@ -39,21 +29,38 @@ const MyCard = (): JSX.Element => {
 
 const Nav = (): JSX.Element => {
   return (
-    <nav className="navbar navbar-expand-lg">
-      <div className="container-fluid">
-        <a href="#" className="navbar-brand">
-          Nadestack
-        </a>
-      </div>
-    </nav>
+    <div className="container">
+      <nav className="navbar navbar-expand-lg">
+        <div className="container-fluid">
+          <a href="#" className="navbar-brand">
+            Nadestack
+          </a>
+        </div>
+      </nav>
+    </div>
   );
 };
 
-function App() {
+const Footer = (): JSX.Element => {
+  return (
+    <div className="container bg-body-tertiary border-top">
+      <div className="row">
+        <div className="col-sm-4">
+          nadestack.gg
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function App(): JSX.Element {
   return (
     <div className="App">
       <Nav />
-      <MyCard />
+      <div className="container">
+        <MyCard />
+      </div>
+      <Footer />
     </div>
   );
 }
