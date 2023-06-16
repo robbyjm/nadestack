@@ -2,10 +2,12 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
+function handleClick() {
+  alert('you clicked me')
+}
+
 const MyCard = (): JSX.Element => {
-  function handleClick() {
-    alert('you clicked me')    
-  }
+
   return (
     <div className="row">
       <div className="col-sm-3 mb-3 mb-sm-0">
@@ -13,7 +15,7 @@ const MyCard = (): JSX.Element => {
           <video controls src="nukeheaven.mp4" className="img-thumbnail" />
           <div className="card-body container">
             <div className="row"><h5 className="card-title col-sm-10">Heaven Smoke</h5>
-            <i className="bi bi-bookmark-star col-sm-2" onClick={handleClick()}></i>
+            <i className="bi bi-bookmark-star col-sm-2" onClick={handleClick}></i>
             </div>
             <div className="row">
               <p className="card-text col-sm-12">some text</p>
@@ -33,7 +35,7 @@ const Nav = (): JSX.Element => {
     <div className="container bg-primary">
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
-          <a href="#" className="navbar-brand">
+          <a href="#" className="navbar-brand text-light">
             Nadestack
           </a>
         </div>
@@ -44,9 +46,9 @@ const Nav = (): JSX.Element => {
 
 const Footer = (): JSX.Element => {
   return (
-    <div className="container bg-body-tertiary border-top">
+    <div className="container bg-body-tertiary border-top bg-primary">
       <div className="row">
-        <div className="col-sm-4">
+        <div className="col-sm-4 text-light">
           nadestack.gg
         </div>
       </div>
