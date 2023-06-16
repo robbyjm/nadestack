@@ -5,13 +5,19 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node",
+            "name": "Launch Firefox",
             "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${file}"
+            "type": "firefox",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}/src",
+            "enableCRAWorkaround": true,
+            "suggestPathMappingWizard": true,
+            "log": {
+                "fileName": "${workspaceFolder}/log.txt",
+                "fileLevel": {
+                    "default": "Debug"
+                }
+            }
         }
     ]
 }

@@ -9,4 +9,5 @@ jobs:
      - name: Check
        uses: mristin/opinionated-commit-message@v3.0.0
        with:
-         allow-one-liners: 'true'
+          allow-one-liners: 'true'
+
