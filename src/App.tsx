@@ -1,13 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-function handleClick() {
-  alert('you clicked me')
-}
 
 const MyCard = (): JSX.Element => {
-
+  const [isActive, setIsActive] = useState(false);
+  function handleClick(e:React.MouseEvent) {
+    setIsActive(current => !current);
+  }
   return (
     <div className="row">
       <div className="col-sm-3 mb-3 mb-sm-0">
@@ -15,7 +15,7 @@ const MyCard = (): JSX.Element => {
           <video controls src="nukeheaven.mp4" className="img-thumbnail" />
           <div className="card-body container">
             <div className="row"><h5 className="card-title col-sm-10">Heaven Smoke</h5>
-            <i className="bi bi-bookmark-star col-sm-2" onClick={handleClick}></i>
+            <i className={isActive ? "bi bi-bookmark-plus-fill col-sm-2" : "bi bi-bookmark-plus col-sm-2" } onClick={handleClick}></i>
             </div>
             <div className="row">
               <p className="card-text col-sm-12">some  text</p>
@@ -28,6 +28,7 @@ const MyCard = (): JSX.Element => {
       </div>
     </div>
   );
+
 };
 
 const Nav = (): JSX.Element => {
