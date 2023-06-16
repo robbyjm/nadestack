@@ -5,6 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}/src",
+            "runtimeExecutable": "/Applications/Chromium.app/Contents/MacOS/Chromium"
+        },
+        {
             "name": "Launch Firefox",
             "request": "launch",
             "type": "firefox",

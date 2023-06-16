@@ -10,19 +10,20 @@ const MyCard = (): JSX.Element => {
   }
   return (
     <div className="row">
-      <div className="col-sm-3 mb-3 mb-sm-0">
+      <div className="col-md-4 col-sm-6 col-xs-6 mb-3 mb-sm-0">
         <div className="card">
           <video controls src="nukeheaven.mp4" className="img-thumbnail" />
           <div className="card-body container">
-            <div className="row"><h5 className="card-title col-sm-10">Heaven Smoke</h5>
-            <i className={isActive ? "bi bi-bookmark-plus-fill col-sm-2" : "bi bi-bookmark-plus col-sm-2" } onClick={handleClick}></i>
+            <div className="row">
+              <h5 className="card-title col-10">Heaven Smoke</h5>
+              <i className={isActive ? "bi bi-bookmark-plus-fill col-1" : "bi bi-bookmark-plus col-1" } onClick={handleClick}></i>
             </div>
             <div className="row">
               <p className="card-text col-sm-12">some  text</p>
             </div>
           </div>
           <div className="card-footer text-muted">
-            uploaded by @furnacetendie<i className="bi bi-0-circle"></i>
+            uploaded by @furnacetendie
           </div>
         </div>
       </div>
@@ -33,27 +34,27 @@ const MyCard = (): JSX.Element => {
 
 const Nav = (): JSX.Element => {
   return (
-    <div className="container bg-primary">
-      <nav className="navbar navbar-expand-lg">
-        <div className="container-fluid">
+      <header className="bg-primary navbar navbar-expand-lg bd-gutter">
+        <nav className="container-xxl">
           <a href="#" className="navbar-brand text-light">
             Nadestack
           </a>
-        </div>
-      </nav>
-    </div>
+        </nav>
+      </header>
   );
 };
 
 const Footer = (): JSX.Element => {
   return (
-    <div className="container bg-body-tertiary border-top bg-primary">
+    <footer className="bg-light border-top">
+      <div className="container-xxl">
       <div className="row">
-        <div className="col-sm-4 text-light">
+        <div className="col-sm-4">
           nadestack.gg
         </div>
       </div>
-    </div>
+      </div>
+    </footer>
   )
 }
 

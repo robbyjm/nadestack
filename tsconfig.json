@@ -19,7 +19,8 @@
     "isolatedModules": true,
     "noEmit": false, // I've tried this with both false and true (default value)
     "jsx": "react-jsx",
-    "sourceMap": true // I've tried with this both true and false (default value)
+    "sourceMap": true, // I've tried with this both true and false (default value)
+    "outDir": "./dist"
   },
   "include": [
     "src"
