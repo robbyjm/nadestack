@@ -18,7 +18,7 @@ const MyCard = (): JSX.Element => {
             <i className="bi bi-bookmark-star col-sm-2" onClick={handleClick}></i>
             </div>
             <div className="row">
-              <p className="card-text col-sm-12">some text</p>
+              <p className="card-text col-sm-12">some  text</p>
             </div>
           </div>
           <div className="card-footer text-muted">
