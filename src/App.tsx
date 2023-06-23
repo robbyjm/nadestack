@@ -1,22 +1,25 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
+interface thaVideo {
+  video: string
+}
 
-const MyCard = (): JSX.Element => {
+const MyCard = ({ video }: thaVideo): JSX.Element => {
   const [isActive, setIsActive] = useState(false);
-  function handleClick(e:React.MouseEvent) {
+  function handleClick(e: React.MouseEvent) {
     setIsActive(current => !current);
   }
   return (
-    <div className="row">
+    <div className='row'>
       <div className="col-md-4 col-sm-6 col-xs-6 mb-3 mb-sm-0">
         <div className="card">
-          <video controls src="nukeheaven.mp4" className="img-thumbnail" />
+          <video controls src={`http://localhost:4000/s3/${video}`} className="img-thumbnail myVideo" />
           <div className="card-body container">
             <div className="row">
               <h5 className="card-title col-10">Heaven Smoke</h5>
-              <i className={isActive ? "bi bi-bookmark-plus-fill col-1" : "bi bi-bookmark-plus col-1" } onClick={handleClick}></i>
+              <i className={isActive ? "bi bi-bookmark-plus-fill col-1" : "bi bi-bookmark-plus col-1"} onClick={handleClick}></i>
             </div>
             <div className="row">
               <p className="card-text col-sm-12">some  text</p>
@@ -29,18 +32,17 @@ const MyCard = (): JSX.Element => {
       </div>
     </div>
   );
-
 };
 
 const Nav = (): JSX.Element => {
   return (
-      <header className="bg-primary navbar navbar-expand-lg bd-gutter">
-        <nav className="container-xxl">
-          <a href="#" className="navbar-brand text-light">
-            Nadestack
-          </a>
-        </nav>
-      </header>
+    <header className="bg-primary navbar navbar-expand-lg bd-gutter">
+      <nav className="container-xxl">
+        <a href="#" className="navbar-brand text-light">
+          Nadestack
+        </a>
+      </nav>
+    </header>
   );
 };
 
@@ -48,26 +50,34 @@ const Footer = (): JSX.Element => {
   return (
     <footer className="bg-light border-top">
       <div className="container-xxl">
-      <div className="row">
-        <div className="col-sm-4">
-          nadestack.gg
+        <div className="row">
+          <div className="col-sm-4">
+            nadestack.gg
+          </div>
         </div>
-      </div>
       </div>
     </footer>
   )
 }
 
-function App(): JSX.Element {
-  return (
-    <div className="App">
-      <Nav />
-      <div className="container">
-        <MyCard />
-      </div>
-      <Footer />
-    </div>
-  );
-}
+function prepareTheStuff(): JSX.Element[] {
+  const items: JSX.Element[] = []
+  useEffect(() => {
+    fetch('http://localhost:4000/s3')
+      .then(res => res.json())
+      .then(data =>  )
+  }, [])
 
-export default App;
+  function App(): JSX.Element {
+    return (
+      <div className="App">
+        <Nav />
+        <div className="container">
+          {prepareTheStuff()}
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  export default App;

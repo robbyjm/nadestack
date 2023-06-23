@@ -1,0 +1,47 @@
+DEBUG|000.651|BreakpointsManager: Setting 1 breakpoints for /home/robby/Documents/GitHub/nadestack/src/App.tsx
+DEBUG|000.659|FirefoxDebugAdapter: Setting exception filters: ["uncaught"]
+DEBUG|000.660|FirefoxDebugAdapter: 0 threads
+DEBUG|000.733|DebugConnection: Received response/event {"from":"root","applicationType":"browser","testConnectionPrefix":"server1.conn0.","traits":{"networkMonitor":true,"resources":{"extensions-backgroundscript-status":true},"workerConsoleApiMessagesDispatchedToMainThread":true,"supportsJavascriptTracing":true,"isOverridesSupported":true,"supportsAddonsUninstall":true}}
+DEBUG|000.733|RootActorProxy: Fetching root
+DEBUG|000.733|DebugConnection: Sending request {"to":"root","type":"getRoot"}
+DEBUG|000.742|DebugConnection: Received response/event {"preferenceActor":"server1.conn0.preferenceActor1","addonsActor":"server1.conn0.addonsActor2","deviceActor":"server1.conn0.deviceActor3","heapSnapshotFileActor":"server1.conn0.heapSnapshotFileActor4","perfActor":"server1.conn0.perfActor5","parentAccessibilityActor":"server1.conn0.parentAccessibilityActor6","screenshotActor":"server1.conn0.screenshotActor7","from":"root"}
+DEBUG|000.742|RootActorProxy: Received root response
+DEBUG|000.742|RootActorProxy: Fetching tabs
+DEBUG|000.742|DebugConnection: Sending request {"to":"root","type":"listTabs"}
+DEBUG|000.882|DebugConnection: Received response/event {"tabs":[],"from":"root"}
+INFO |000.882|RootActorProxy: Received 0 tabs - will retry in 100ms
+DEBUG|000.982|DebugConnection: Sending request {"to":"root","type":"listTabs"}
+DEBUG|001.168|DebugConnection: Received response/event {"tabs":[{"actor":"server1.conn0.tabDescriptor8","browserId":7,"browsingContextID":8,"isZombieTab":false,"outerWindowID":17,"selected":true,"title":"localhost:3000/","traits":{"watcher":true,"supportsReloadDescriptor":true},"url":"about:blank"}],"from":"root"}
+DEBUG|001.168|RootActorProxy: Received 1 tabs
+DEBUG|001.168|RootActorProxy: Tab server1.conn0.tabDescriptor8 opened
+DEBUG|001.168|TabDescriptorActorProxy: Connecting to tab
+DEBUG|001.168|DebugConnection: Sending request {"to":"server1.conn0.tabDescriptor8","type":"getTarget"}
+DEBUG|001.278|DebugConnection: Received response/event {"frame":{"actor":"server1.conn0.child9/windowGlobalTarget2","browsingContextID":8,"processID":74463,"innerWindowId":4294967297,"topInnerWindowId":4294967297,"isTopLevelTarget":true,"isPopup":false,"isPrivate":false,"traits":{"isBrowsingContext":true,"supportsTopLevelTargetFlag":true,"frames":true,"logInPage":true,"watchpoints":true,"navigation":true},"title":"","url":"about:blank","outerWindowID":17,"consoleActor":"server1.conn0.child9/consoleActor3","inspectorActor":"server1.conn0.child9/inspectorActor4","styleSheetsActor":"server1.conn0.child9/styleSheetsActor5","memoryActor":"server1.conn0.child9/memoryActor6","reflowActor":"server1.conn0.child9/reflowActor7","cssPropertiesActor":"server1.conn0.child9/cssPropertiesActor8","animationsActor":"server1.conn0.child9/animationsActor9","responsiveActor":"server1.conn0.child9/responsiveActor10","webExtensionInspectedWindowActor":"server1.conn0.child9/webExtensionInspectedWindowActor11","accessibilityActor":"server1.conn0.child9/accessibilityActor12","changesActor":"server1.conn0.child9/changesActor13","manifestActor":"server1.conn0.child9/manifestActor14","networkContentActor":"server1.conn0.child9/networkContentActor15","screenshotContentActor":"server1.conn0.child9/screenshotContentActor16","tracerActor":"server1.conn0.child9/tracerActor17","threadActor":"server1.conn0.child9/thread1"},"from":"server1.conn0.tabDescriptor8"}
+DEBUG|001.278|TabDescriptorActorProxy: Received getTarget response
+INFO |001.278|FirefoxDebugSession: Tab opened with url about:blank
+DEBUG|001.279|TabActorProxy: Attaching to tab server1.conn0.child9/windowGlobalTarget2
+DEBUG|001.279|DebugConnection: Sending request {"to":"server1.conn0.child9/windowGlobalTarget2","type":"attach"}
+DEBUG|001.281|DebugConnection: Received response/event {"type":"frameUpdate","frames":[{"id":17,"isTopLevel":true,"url":"http://localhost:3000/","title":""}],"from":"server1.conn0.child9/windowGlobalTarget2"}
+DEBUG|001.325|DebugConnection: Received response/event {"type":"frameUpdate","frames":[{"id":17,"isTopLevel":true,"url":"http://localhost:3000/","title":""}],"from":"server1.conn0.child9/windowGlobalTarget2"}
+DEBUG|001.325|DebugConnection: Received response/event {"from":"root","type":"tabListChanged"}
+DEBUG|001.325|RootActorProxy: Received tabListChanged event
+DEBUG|001.325|RootActorProxy: Fetching tabs
+DEBUG|001.325|DebugConnection: Sending request {"to":"root","type":"listTabs"}
+DEBUG|001.325|DebugConnection: Received response/event {"error":"unrecognizedPacketType","message":"Actor server1.conn0.child9/windowGlobalTarget2 does not recognize the packet type 'attach'","from":"server1.conn0.child9/windowGlobalTarget2"}
+WARN |001.325|TabActorProxy: Unknown message from TabActor: {"error":"unrecognizedPacketType","message":"Actor server1.conn0.child9/windowGlobalTarget2 does not recognize the packet type 'attach'","from":"server1.conn0.child9/windowGlobalTarget2"}
+DEBUG|001.378|DebugConnection: Received response/event {"tabs":[{"actor":"server1.conn0.tabDescriptor8","browserId":7,"browsingContextID":8,"isZombieTab":false,"outerWindowID":17,"selected":true,"title":"React App","traits":{"watcher":true,"supportsReloadDescriptor":true},"url":"http://localhost:3000/"}],"from":"root"}
+DEBUG|001.378|RootActorProxy: Received 1 tabs
+DEBUG|001.549|DebugConnection: Received response/event {"type":"frameUpdate","frames":[{"id":4294967299,"parentID":17,"isTopLevel":false,"url":"about:blank","title":""}],"from":"server1.conn0.child9/windowGlobalTarget2"}
+DEBUG|001.555|DebugConnection: Received response/event {"type":"frameUpdate","frames":[{"id":17,"isTopLevel":true,"url":"http://localhost:3000/","title":"React App"}],"from":"server1.conn0.child9/windowGlobalTarget2"}
+DEBUG|001.566|DebugConnection: Received response/event {"type":"tabNavigated","url":"http://localhost:3000/","title":"React App","state":"stop","isFrameSwitching":false,"from":"server1.conn0.child9/windowGlobalTarget2"}
+DEBUG|001.566|TabActorProxy: Tab server1.conn0.child9/windowGlobalTarget2 did navigate to http://localhost:3000/
+DEBUG|009.875|DebugConnection: Received response/event {"from":"root","type":"forwardingCancelled","prefix":"server1.conn0.child9"}
+DEBUG|009.875|RootActorProxy: Received forwardingCancelled event from root (ignoring)
+DEBUG|009.882|DebugConnection: Received response/event {"type":"descriptor-destroyed","from":"server1.conn0.tabDescriptor8"}
+WARN |009.882|TabDescriptorActorProxy: Unknown message from TabDescriptorActor: {"type":"descriptor-destroyed","from":"server1.conn0.tabDescriptor8"}
+DEBUG|009.882|DebugConnection: Received response/event {"from":"root","type":"tabListChanged"}
+DEBUG|009.882|RootActorProxy: Received tabListChanged event
+DEBUG|009.882|RootActorProxy: Fetching tabs
+DEBUG|009.882|DebugConnection: Sending request {"to":"root","type":"listTabs"}
+INFO |009.885|FirefoxDebugSession: Connection to Firefox closed - terminating debug session
+DEBUG|010.399|FirefoxDebugSession: Removing /tmp/vscode-firefox-debug-profile-29f601fd-c569-43d8-9345-c2e182362819
