@@ -51,16 +51,16 @@ const Footer = (): JSX.Element => {
 
 const Body = (props: any): JSX.Element => {
   return (
-    <section className="container"><Card/></section>
+    <section className="container"><Card data={props.data}/></section>
   )
 }
 
 const Card = (props: any): JSX.Element => {
-  const cards = props.data.map((entry) => (
-    <CardBody  /><CardFooter />
+  const cards = props.data.map((entry: any) => (
+    <div className="card"><CardBody data={entry} /><CardFooter data={entry}/></div>
   ))
   return (
-    <div className="card"></div>
+    cards
   )
 }
 
@@ -72,11 +72,11 @@ const CardBody = (props: any): JSX.Element => {
   return (
     <div className="card-body container">
       <div className="row">
-        <h5 className="card-title col-10">{data.title}</h5>
+        <h5 className="card-title col-10">{props.data.title}</h5>
         <i className={isActive ? "bi bi-bookmark-plus-fill col-1" : "bi bi-bookmark-plus col-1"} onClick={handleClick}></i>
       </div>
       <div className="row">
-        <p className="card-text col-sm-12">{data.description}</p>
+        <p className="card-text col-sm-12">{props.data.description}</p>
       </div>
     </div>
   )
