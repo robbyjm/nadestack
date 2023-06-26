@@ -57,7 +57,7 @@ const Body = (props: any): JSX.Element => {
 
 const Card = (props: any): JSX.Element => {
   const cards = props.data.map((entry: any) => (
-    <div className="card col col-4"><CardBody data={entry} /><CardFooter data={entry}/></div>
+    <div className="col col-sm-4"><div className="card"><CardBody data={entry} /><CardFooter data={entry}/></div></div>
   ))
   return (
     cards
