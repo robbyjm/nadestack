@@ -51,13 +51,13 @@ const Footer = (): JSX.Element => {
 
 const Body = (props: any): JSX.Element => {
   return (
-    <section className="container"><Card data={props.data}/></section>
+    <section className="container"><div className="row"><Card data={props.data}/></div></section>
   )
 }
 
 const Card = (props: any): JSX.Element => {
   const cards = props.data.map((entry: any) => (
-    <div className="card"><CardBody data={entry} /><CardFooter data={entry}/></div>
+    <div className="card col col-4"><CardBody data={entry} /><CardFooter data={entry}/></div>
   ))
   return (
     cards
